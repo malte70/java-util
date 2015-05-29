@@ -11,6 +11,26 @@ package de.malte_bublitz.util;
 import java.util.Scanner;
 
 public class ANSIConsole {
+	public static int COLOR_BLACK = 0;
+	public static int COLOR_RED = 1;
+	public static int COLOR_GREEN = 2;
+	public static int COLOR_YELLOW = 3;
+	public static int COLOR_BLUE = 4;
+	public static int COLOR_DARK_MAGENTA = 5;
+	public static int COLOR_DARK_CYAN = 6;
+	public static int COLOR_GREY = 7;
+	public static int COLOR_DARK_GREY = 8;
+	public static int COLOR_LIGHT_RED = 9;
+	public static int COLOR_LIGHT_GREEN = 10;
+	public static int COLOR_LIGHT_YELLOW = 11;
+	public static int COLOR_LIGHT_BLUE = 12;
+	public static int COLOR_MAGENTA = 13;
+	public static int COLOR_CYAN = 14;
+	public static int COLOR_WHITE = 15;
+	public static int ATTR_BOLD = 100;
+	public static int ATTR_UNDERLINE = 101;
+	public static int ATTR_RESET = 102;
+	
 	public void escape(String code) {
 		char ESC = 27;
 		System.out.print(ESC + "[" + code);
@@ -19,67 +39,67 @@ public class ANSIConsole {
 		escape("H");
 		escape("2J");
 	}
-	public void setForegroundColor(String c) {
+	public void setForegroundColor(int c) {
 		switch (c) {
-			case "BLACK":
+			case 0:
 				escape("0;30m");
 				break;
-			case "RED":
+			case 1:
 				escape("0;31m");
 				break;
-			case "GREEN":
+			case 2:
 				escape("0;32m");
 				break;
-			case "YELLOW":
+			case 3:
 				escape("0;33m");
 				break;
-			case "BLUE":
+			case 4:
 				escape("0;34m");
 				break;
-			case "DARK_MAGENTA":
+			case 5:
 				escape("0;35m");
 				break;
-			case "DARK_CYAN":
+			case 6:
 				escape("0;36m");
 				break;
-			case "GREY":
+			case 7:
 				escape("0;37m");
 				break;
-			case "DARK_GREY":
+			case 8:
 				escape("1;30m");
 				break;
-			case "LIGHT_RED":
+			case 9:
 				escape("1;31m");
 				break;
-			case "LIGHT_GREEN":
+			case 10:
 				escape("1;32m");
 				break;
-			case "LIGHT_YELLOW":
+			case 11:
 				escape("1;33m");
 				break;
-			case "LIGHT_BLUE":
+			case 12:
 				escape("1;34m");
 				break;
-			case "MAGENTA":
+			case 13:
 				escape("1;35m");
 				break;
-			case "CYAN":
+			case 14:
 				escape("1;36m");
 				break;
-			case "WHITE":
+			case 15:
 				escape("1;37m");
 				break;
 		}
 	}
-	public void setAttribute(String a) {
+	public void setAttribute(int a) {
 		switch (a) {
-			case "BOLD":
+			case 100:
 				escape("1m");
 				break;
-			case "UNDERLINE":
+			case 101:
 				escape("4m");
 				break;
-			case "RESET":
+			case 102:
 				escape("0m");
 				break;
 		}
