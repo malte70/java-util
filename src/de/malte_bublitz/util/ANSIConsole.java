@@ -41,65 +41,65 @@ public class ANSIConsole {
 	}
 	public void setForegroundColor(int c) {
 		switch (c) {
-			case 0:
+			case 0: // Black
 				escape("0;30m");
 				break;
-			case 1:
+			case 1: // Red
 				escape("0;31m");
 				break;
-			case 2:
+			case 2: // Green
 				escape("0;32m");
 				break;
-			case 3:
+			case 3: // Yellow
 				escape("0;33m");
 				break;
-			case 4:
+			case 4: // Blue
 				escape("0;34m");
 				break;
-			case 5:
+			case 5: // Dark Magenta
 				escape("0;35m");
 				break;
-			case 6:
+			case 6: // Dark Cyan
 				escape("0;36m");
 				break;
-			case 7:
+			case 7: // Grey
 				escape("0;37m");
 				break;
-			case 8:
+			case 8: // Dark Grey
 				escape("1;30m");
 				break;
-			case 9:
+			case 9: // Light Red
 				escape("1;31m");
 				break;
-			case 10:
+			case 10: // Light Green
 				escape("1;32m");
 				break;
-			case 11:
+			case 11: // Light Yellow
 				escape("1;33m");
 				break;
-			case 12:
+			case 12: // Light Blue
 				escape("1;34m");
 				break;
-			case 13:
+			case 13: // Magenta
 				escape("1;35m");
 				break;
-			case 14:
+			case 14: // Cyan
 				escape("1;36m");
 				break;
-			case 15:
+			case 15: // White
 				escape("1;37m");
 				break;
 		}
 	}
 	public void setAttribute(int a) {
 		switch (a) {
-			case 100:
+			case 100: // Bold
 				escape("1m");
 				break;
-			case 101:
+			case 101: // Underline
 				escape("4m");
 				break;
-			case 102:
+			case 102: // Reset
 				escape("0m");
 				break;
 		}
